@@ -1,0 +1,170 @@
+=========================================================
+Ablaufprotokoll: threadExample
+Modul: Echtzeitsysteme / Technische Informatik
+=========================================================
+
+1. Build-Ausgabe
+---------------------------------------------------------
+Die Kompilierung mit 'make -j2' wurde fehlerfrei und ohne Warnungen abgeschlossen. Ein vollständiges Protokoll der Kompilierung wurde in der Datei 'build.log' im Projektverzeichnis gespeichert.
+Auszug aus 'build.log':
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C ./configure install
+perl -CSD /Users/emnu7898/uni/echtzeit/epics-base/bin/darwin-aarch64/makeMakefile.pl O.darwin-aarch64 ../..
+mkdir -p O.Common
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C O.darwin-aarch64 -f ../Makefile TOP=../.. \
+	    T_A=darwin-aarch64 install
+perl -CSD /Users/emnu7898/uni/echtzeit/epics-base/bin/darwin-aarch64/convertRelease.pl checkRelease
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C ./myExampleApp install
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C ./src install
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C ./Db install
+perl -CSD /Users/emnu7898/uni/echtzeit/epics-base/bin/darwin-aarch64/makeMakefile.pl O.darwin-aarch64 ../../..
+perl -CSD /Users/emnu7898/uni/echtzeit/epics-base/bin/darwin-aarch64/makeMakefile.pl O.darwin-aarch64 ../../..
+mkdir -p O.Common
+mkdir -p O.Common
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C O.darwin-aarch64 -f ../Makefile TOP=../../.. \
+	    T_A=darwin-aarch64 install
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C O.darwin-aarch64 -f ../Makefile TOP=../../.. \
+	    T_A=darwin-aarch64 install
+perl -CSD /Users/emnu7898/uni/echtzeit/epics-base/bin/darwin-aarch64/dbdToRecordtypeH.pl   -I. -I.. -I../O.Common -I../../../dbd -I/Users/emnu7898/uni/echtzeit/epics-base/dbd -o xxxRecord.h ../xxxRecord.dbd
+make[3]: Nothing to be done for `install'.
+perl -CSD /Users/emnu7898/uni/echtzeit/epics-base/bin/darwin-aarch64/genVersionHeader.pl   -t ../../.. -N myExampleVERSION -V "" ../O.Common/myExampleVersion.h
+Creating dbd file myExample.dbd
+perl -CSD /Users/emnu7898/uni/echtzeit/epics-base/bin/darwin-aarch64/dbdExpand.pl   -I. -I.. -I../O.Common -I../../../dbd -I/Users/emnu7898/uni/echtzeit/epics-base/dbd -o myExample.dbd threadExample.dbd base.dbd xxxSupport.dbd dbSubExample.dbd devmyExampleVersion.dbd myExampleHello.dbd initTrace.dbd PVAServerRegister.dbd qsrv.dbd
+fatal: bad revision 'HEAD'
+fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+Creating VCS header ../O.Common/myExampleVersion.h
+    myExampleVERSION = ""
+cc           -DUSE_TYPED_RSET -DUSE_TYPED_DSET    -DUNIX  -Ddarwin      -O3 -g   -Wall -Werror-implicit-function-declaration       -arch arm64 -mmacosx-version-min=14.0   -fno-common  -I. -I../O.Common -I. -I. -I.. -I../../../include/compiler/clang -I../../../include/os/Darwin -I../../../include -I/Users/emnu7898/uni/echtzeit/epics-base/include/compiler/clang -I/Users/emnu7898/uni/echtzeit/epics-base/include/os/Darwin -I/Users/emnu7898/uni/echtzeit/epics-base/include        -I/opt/homebrew/include  -MM -MF threadExample.d  ../threadExample.c
+cc           -DUSE_TYPED_RSET -DUSE_TYPED_DSET    -DUNIX  -Ddarwin      -O3 -g   -Wall -Werror-implicit-function-declaration       -arch arm64 -mmacosx-version-min=14.0   -fno-common  -fPIC -I. -I../O.Common -I. -I. -I.. -I../../../include/compiler/clang -I../../../include/os/Darwin -I../../../include -I/Users/emnu7898/uni/echtzeit/epics-base/include/compiler/clang -I/Users/emnu7898/uni/echtzeit/epics-base/include/os/Darwin -I/Users/emnu7898/uni/echtzeit/epics-base/include        -I/opt/homebrew/include  -MM -MF initTrace.d  ../initTrace.c
+cc           -DUSE_TYPED_RSET -DUSE_TYPED_DSET    -DUNIX  -Ddarwin      -O3 -g   -Wall -Werror-implicit-function-declaration       -arch arm64 -mmacosx-version-min=14.0   -fno-common  -fPIC -I. -I../O.Common -I. -I. -I.. -I../../../include/compiler/clang -I../../../include/os/Darwin -I../../../include -I/Users/emnu7898/uni/echtzeit/epics-base/include/compiler/clang -I/Users/emnu7898/uni/echtzeit/epics-base/include/os/Darwin -I/Users/emnu7898/uni/echtzeit/epics-base/include        -I/opt/homebrew/include  -MM -MF myExampleHello.d  ../myExampleHello.c
+cc           -DUSE_TYPED_RSET -DUSE_TYPED_DSET    -DUNIX  -Ddarwin      -O3 -g   -Wall -Werror-implicit-function-declaration       -arch arm64 -mmacosx-version-min=14.0   -fno-common  -fPIC -I. -I../O.Common -I. -I. -I.. -I../../../include/compiler/clang -I../../../include/os/Darwin -I../../../include -I/Users/emnu7898/uni/echtzeit/epics-base/include/compiler/clang -I/Users/emnu7898/uni/echtzeit/epics-base/include/os/Darwin -I/Users/emnu7898/uni/echtzeit/epics-base/include        -I/opt/homebrew/include  -MM -MF devmyExampleVersion.d  ../devmyExampleVersion.c
+cc           -DUSE_TYPED_RSET -DUSE_TYPED_DSET    -DUNIX  -Ddarwin      -O3 -g   -Wall -Werror-implicit-function-declaration       -arch arm64 -mmacosx-version-min=14.0   -fno-common  -fPIC -I. -I../O.Common -I. -I. -I.. -I../../../include/compiler/clang -I../../../include/os/Darwin -I../../../include -I/Users/emnu7898/uni/echtzeit/epics-base/include/compiler/clang -I/Users/emnu7898/uni/echtzeit/epics-base/include/os/Darwin -I/Users/emnu7898/uni/echtzeit/epics-base/include        -I/opt/homebrew/include  -MM -MF dbSubExample.d  ../dbSubExample.c
+cc           -DUSE_TYPED_RSET -DUSE_TYPED_DSET    -DUNIX  -Ddarwin      -O3 -g   -Wall -Werror-implicit-function-declaration       -arch arm64 -mmacosx-version-min=14.0   -fno-common  -fPIC -I. -I../O.Common -I. -I. -I.. -I../../../include/compiler/clang -I../../../include/os/Darwin -I../../../include -I/Users/emnu7898/uni/echtzeit/epics-base/include/compiler/clang -I/Users/emnu7898/uni/echtzeit/epics-base/include/os/Darwin -I/Users/emnu7898/uni/echtzeit/epics-base/include        -I/opt/homebrew/include  -MM -MF devXxxSoft.d  ../devXxxSoft.c
+cc           -DUSE_TYPED_RSET -DUSE_TYPED_DSET    -DUNIX  -Ddarwin      -O3 -g   -Wall -Werror-implicit-function-declaration       -arch arm64 -mmacosx-version-min=14.0   -fno-common  -fPIC -I. -I../O.Common -I. -I. -I.. -I../../../include/compiler/clang -I../../../include/os/Darwin -I../../../include -I/Users/emnu7898/uni/echtzeit/epics-base/include/compiler/clang -I/Users/emnu7898/uni/echtzeit/epics-base/include/os/Darwin -I/Users/emnu7898/uni/echtzeit/epics-base/include        -I/opt/homebrew/include  -MM -MF xxxRecord.d  ../xxxRecord.c
+c++           -DUSE_TYPED_RSET -DUSE_TYPED_DSET    -DUNIX  -Ddarwin      -O3 -g   -Wall       -arch arm64    -fno-common  -I. -I../O.Common -I. -I. -I.. -I../../../include/compiler/clang -I../../../include/os/Darwin -I../../../include -I/Users/emnu7898/uni/echtzeit/epics-base/include/compiler/clang -I/Users/emnu7898/uni/echtzeit/epics-base/include/os/Darwin -I/Users/emnu7898/uni/echtzeit/epics-base/include        -I/opt/homebrew/include  -MM -MF myExampleMain.d  ../myExampleMain.cpp
+perl -CSD /Users/emnu7898/uni/echtzeit/epics-base/bin/darwin-aarch64/registerRecordDeviceDriver.pl   -I. -I.. -I../O.Common -I../../../dbd -I/Users/emnu7898/uni/echtzeit/epics-base/dbd    -o myExample_registerRecordDeviceDriver.cpp \
+            ../O.Common/myExample.dbd myExample_registerRecordDeviceDriver /Users/emnu7898/threadExample_lab
+c++           -DUSE_TYPED_RSET -DUSE_TYPED_DSET    -DUNIX  -Ddarwin      -O3 -g   -Wall       -arch arm64    -fno-common  -I. -I../O.Common -I. -I. -I.. -I../../../include/compiler/clang -I../../../include/os/Darwin -I../../../include -I/Users/emnu7898/uni/echtzeit/epics-base/include/compiler/clang -I/Users/emnu7898/uni/echtzeit/epics-base/include/os/Darwin -I/Users/emnu7898/uni/echtzeit/epics-base/include        -I/opt/homebrew/include  -MM -MF myExample_registerRecordDeviceDriver.d  myExample_registerRecordDeviceDriver.cpp
+perl -CSD /Users/emnu7898/uni/echtzeit/epics-base/bin/darwin-aarch64/genVersionHeader.pl   -t ../../.. -N myExampleVERSION -V "" ../O.Common/myExampleVersion.h
+fatal: bad revision 'HEAD'
+fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+Keeping VCS header ../O.Common/myExampleVersion.h
+    myExampleVERSION = ""
+Installing created dbd file ../../../dbd/myExample.dbd
+Installing generated generic include file ../../../include/xxxRecord.h
+cc           -DUSE_TYPED_RSET -DUSE_TYPED_DSET    -DUNIX  -Ddarwin      -O3 -g   -Wall -Werror-implicit-function-declaration       -arch arm64 -mmacosx-version-min=14.0   -fno-common  -fPIC -I. -I../O.Common -I. -I. -I.. -I../../../include/compiler/clang -I../../../include/os/Darwin -I../../../include -I/Users/emnu7898/uni/echtzeit/epics-base/include/compiler/clang -I/Users/emnu7898/uni/echtzeit/epics-base/include/os/Darwin -I/Users/emnu7898/uni/echtzeit/epics-base/include        -I/opt/homebrew/include  -c ../xxxRecord.c
+cc           -DUSE_TYPED_RSET -DUSE_TYPED_DSET    -DUNIX  -Ddarwin      -O3 -g   -Wall -Werror-implicit-function-declaration       -arch arm64 -mmacosx-version-min=14.0   -fno-common  -fPIC -I. -I../O.Common -I. -I. -I.. -I../../../include/compiler/clang -I../../../include/os/Darwin -I../../../include -I/Users/emnu7898/uni/echtzeit/epics-base/include/compiler/clang -I/Users/emnu7898/uni/echtzeit/epics-base/include/os/Darwin -I/Users/emnu7898/uni/echtzeit/epics-base/include        -I/opt/homebrew/include  -c ../devXxxSoft.c
+cc           -DUSE_TYPED_RSET -DUSE_TYPED_DSET    -DUNIX  -Ddarwin      -O3 -g   -Wall -Werror-implicit-function-declaration       -arch arm64 -mmacosx-version-min=14.0   -fno-common  -fPIC -I. -I../O.Common -I. -I. -I.. -I../../../include/compiler/clang -I../../../include/os/Darwin -I../../../include -I/Users/emnu7898/uni/echtzeit/epics-base/include/compiler/clang -I/Users/emnu7898/uni/echtzeit/epics-base/include/os/Darwin -I/Users/emnu7898/uni/echtzeit/epics-base/include        -I/opt/homebrew/include  -c ../dbSubExample.c
+cc           -DUSE_TYPED_RSET -DUSE_TYPED_DSET    -DUNIX  -Ddarwin      -O3 -g   -Wall -Werror-implicit-function-declaration       -arch arm64 -mmacosx-version-min=14.0   -fno-common  -fPIC -I. -I../O.Common -I. -I. -I.. -I../../../include/compiler/clang -I../../../include/os/Darwin -I../../../include -I/Users/emnu7898/uni/echtzeit/epics-base/include/compiler/clang -I/Users/emnu7898/uni/echtzeit/epics-base/include/os/Darwin -I/Users/emnu7898/uni/echtzeit/epics-base/include        -I/opt/homebrew/include  -c ../devmyExampleVersion.c
+cc           -DUSE_TYPED_RSET -DUSE_TYPED_DSET    -DUNIX  -Ddarwin      -O3 -g   -Wall -Werror-implicit-function-declaration       -arch arm64 -mmacosx-version-min=14.0   -fno-common  -fPIC -I. -I../O.Common -I. -I. -I.. -I../../../include/compiler/clang -I../../../include/os/Darwin -I../../../include -I/Users/emnu7898/uni/echtzeit/epics-base/include/compiler/clang -I/Users/emnu7898/uni/echtzeit/epics-base/include/os/Darwin -I/Users/emnu7898/uni/echtzeit/epics-base/include        -I/opt/homebrew/include  -c ../myExampleHello.c
+cc           -DUSE_TYPED_RSET -DUSE_TYPED_DSET    -DUNIX  -Ddarwin      -O3 -g   -Wall -Werror-implicit-function-declaration       -arch arm64 -mmacosx-version-min=14.0   -fno-common  -fPIC -I. -I../O.Common -I. -I. -I.. -I../../../include/compiler/clang -I../../../include/os/Darwin -I../../../include -I/Users/emnu7898/uni/echtzeit/epics-base/include/compiler/clang -I/Users/emnu7898/uni/echtzeit/epics-base/include/os/Darwin -I/Users/emnu7898/uni/echtzeit/epics-base/include        -I/opt/homebrew/include  -c ../initTrace.c
+cc           -DUSE_TYPED_RSET -DUSE_TYPED_DSET    -DUNIX  -Ddarwin      -O3 -g   -Wall -Werror-implicit-function-declaration       -arch arm64 -mmacosx-version-min=14.0   -fno-common  -I. -I../O.Common -I. -I. -I.. -I../../../include/compiler/clang -I../../../include/os/Darwin -I../../../include -I/Users/emnu7898/uni/echtzeit/epics-base/include/compiler/clang -I/Users/emnu7898/uni/echtzeit/epics-base/include/os/Darwin -I/Users/emnu7898/uni/echtzeit/epics-base/include        -I/opt/homebrew/include  -c ../threadExample.c
+c++           -DUSE_TYPED_RSET -DUSE_TYPED_DSET    -DUNIX  -Ddarwin      -O3 -g   -Wall       -arch arm64    -fno-common  -I. -I../O.Common -I. -I. -I.. -I../../../include/compiler/clang -I../../../include/os/Darwin -I../../../include -I/Users/emnu7898/uni/echtzeit/epics-base/include/compiler/clang -I/Users/emnu7898/uni/echtzeit/epics-base/include/os/Darwin -I/Users/emnu7898/uni/echtzeit/epics-base/include        -I/opt/homebrew/include  -c myExample_registerRecordDeviceDriver.cpp
+c++           -DUSE_TYPED_RSET -DUSE_TYPED_DSET    -DUNIX  -Ddarwin      -O3 -g   -Wall       -arch arm64    -fno-common  -I. -I../O.Common -I. -I. -I.. -I../../../include/compiler/clang -I../../../include/os/Darwin -I../../../include -I/Users/emnu7898/uni/echtzeit/epics-base/include/compiler/clang -I/Users/emnu7898/uni/echtzeit/epics-base/include/os/Darwin -I/Users/emnu7898/uni/echtzeit/epics-base/include        -I/opt/homebrew/include  -c ../myExampleMain.cpp
+/usr/bin/ar -rc    libmyExampleSupport.a    xxxRecord.o devXxxSoft.o dbSubExample.o devmyExampleVersion.o myExampleHello.o initTrace.o 
+c++ -o libmyExampleSupport.dylib  -dynamiclib -flat_namespace -install_name /Users/emnu7898/threadExample_lab/lib/darwin-aarch64/libmyExampleSupport.dylib   -L/Users/emnu7898/threadExample_lab/lib/darwin-aarch64 -L/Users/emnu7898/uni/echtzeit/epics-base/lib/darwin-aarch64        -arch arm64   -L/opt/homebrew/opt/readline/lib      -L/opt/homebrew/lib     xxxRecord.o devXxxSoft.o dbSubExample.o devmyExampleVersion.o myExampleHello.o initTrace.o    -ldbRecStd -ldbCore -lca -lCom      -lreadline -lm 
+/usr/bin/ranlib libmyExampleSupport.a
+Installing shared library ../../../lib/darwin-aarch64/libmyExampleSupport.dylib
+Installing library ../../../lib/darwin-aarch64/libmyExampleSupport.a
+c++ -o myExample  -L/Users/emnu7898/threadExample_lab/lib/darwin-aarch64 -L/Users/emnu7898/uni/echtzeit/epics-base/lib/darwin-aarch64        -arch arm64   -L/opt/homebrew/opt/readline/lib      -L/opt/homebrew/lib     threadExample.o myExample_registerRecordDeviceDriver.o myExampleMain.o    -lmyExampleSupport -lqsrv -lpvAccessIOC -lpvAccessCA -lpvAccess -lpvData -ldbRecStd -ldbCore -lca -lCom   
+Installing created executable ../../../bin/darwin-aarch64/myExample
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C ./iocBoot install
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C ./iocmyExample install
+perl -CSD /Users/emnu7898/uni/echtzeit/epics-base/bin/darwin-aarch64/convertRelease.pl -t /Users/emnu7898/threadExample_lab envPaths
+
+2. IOC-Start und Hilfe ('help threadExample')
+---------------------------------------------------------
+mac09:iocmyExample emnu7898$ ./st.cmd 
+#!../../bin/darwin-aarch64/myExample
+< envPaths
+epicsEnvSet("IOC","iocmyExample")
+epicsEnvSet("TOP","/Users/emnu7898/threadExample_lab")
+epicsEnvSet("EPICS_BASE","/Users/emnu7898/uni/echtzeit/epics-base")
+cd "/Users/emnu7898/threadExample_lab"
+## Register all support components
+dbLoadDatabase "dbd/myExample.dbd"
+myExample_registerRecordDeviceDriver pdbbase
+## Load record instances
+dbLoadTemplate "db/user.substitutions"
+dbLoadRecords "db/myExampleVersion.db", "user=emnu7898"
+dbLoadRecords "db/dbSubExample.db", "user=emnu7898"
+cd "/Users/emnu7898/threadExample_lab/iocBoot/iocmyExample"
+iocInit
+Starting iocInit
+############################################################################
+## EPICS R7.0.10.1-DEV
+## Rev. R7.0.10-73-gac0fc2effff43c9db116
+## Rev. Date Git: 2026-04-15 10:09:52 -0500
+############################################################################
+iocRun: All initialization complete
+## Start any sequence programs
+#seq sncExample, "user=emnu7898"
+epics> 
+
+epics> help threadExample
+
+threadExample pv-name
+
+Check on a given compress record that the sum of val-array is prime
+Output of the timestamp if prim. The calculation must not influence the PV process.
+Example: threadExample $(user):compressExample
+epics> 
+
+
+3. Laufzeit-Ausgabe (Mindestens 5 PV-Updates)
+---------------------------------------------------------
+epics> threadExample emnu7898:compressExample
+threadExample: 'emnu7898:compressExample' VAL elements=10
+threadExample: subscription active for 'emnu7898:compressExample'
+epics> New worker threadId : 31948277056
+ sum = 6
+ count = 4 values: 0 1 2 3
+New worker threadId : 31948277056
+ sum = 10
+ count = 5 values: 0 1 2 3 4
+New worker threadId : 31948277056
+ sum = 15
+ count = 6 values: 0 1 2 3 4 5
+New worker threadId : 31948277056
+ sum = 21
+ count = 7 values: 0 1 2 3 4 5 6
+New worker threadId : 31948277056
+ sum = 28
+ count = 8 values: 0 1 2 3 4 5 6 7
+New worker threadId : 31948277056
+ sum = 36
+ count = 9 values: 0 1 2 3 4 5 6 7 8
+New worker threadId : 31948277056
+ sum = 45
+ count = 10 values: 0 1 2 3 4 5 6 7 8 9
+New worker threadId : 31948277056
+ sum = 45
+ count = 10 values: 1 2 3 4 5 6 7 8 9 0
+
+
+4. Nachweis: Kein Einfluss auf den PV-Prozess (camonitor)
+---------------------------------------------------------
+mac09:threadExample_lab emnu7898$ camonitor emnu7898:compressExample
+emnu7898:compressExample 2026-07-02 23:09:19.861540 3 0 1 2  
+emnu7898:compressExample 2026-07-02 23:09:20.860741 4 0 1 2 3  
+emnu7898:compressExample 2026-07-02 23:09:21.861536 5 0 1 2 3 4  
+emnu7898:compressExample 2026-07-02 23:09:22.858417 6 0 1 2 3 4 5  
+emnu7898:compressExample 2026-07-02 23:09:23.861482 7 0 1 2 3 4 5 6  
+emnu7898:compressExample 2026-07-02 23:09:24.860139 8 0 1 2 3 4 5 6 7  
+emnu7898:compressExample 2026-07-02 23:09:25.861453 9 0 1 2 3 4 5 6 7 8  
+emnu7898:compressExample 2026-07-02 23:09:26.861474 10 0 1 2 3 4 5 6 7 8 9  
+
+Der camonitor-Log beweist, dass das Auslesen und die Berechnung schritthaltend
+erfolgen (ca. 1 Update pro Sekunde). Der periodische Scan des Records wird zu 
+keinem Zeitpunkt verzögert oder blockiert.
+
+
+5. Erläuterung der Synchronisationsstrategie
+---------------------------------------------------------
+Um den PV-Prozess vollständig zu entkoppeln, wurde eine Drei-Ebenen-Architektur implementiert.
+1. Ebene (Event-Callback): Sobald ein neues Event ausgelöst wird, liest die Callback-Funktion die Daten über dbChannelGetArrayInfo und dbExtractArray aus dem zirkulären Puffer des Records. Diese Rohdaten werden atomar in eine thread-sichere Linked-List (Snapshot-Warteschlange) eingefügt, geschützt durch einen epicsMutex. Ein epicsEventSignal weckt den Dispatcher. Der Callback führt keinerlei Berechnungen durch.
+2. Ebene (Dispatcher-Thread): Der Dispatcher blockiert ressourcenschonend auf epicsEventWait (kein Busy-Waiting). Wenn er geweckt wird, entnimmt er den anstehenden Snapshot unter Mutex-Schutz und übergibt ihn als privaten Heap-Speicher (WorkerArgs) an einen neu erstellten Worker-Thread.
+3. Ebene (Worker-Thread): Der Worker-Thread läuft asynchron mit niedriger Priorität (epicsThreadPriorityLow). Er arbeitet ausschließlich auf seiner privaten Heap-Kopie, führt die Summen- und Primzahlprüfung durch, gibt das Ergebnis aus und beendet sich nach dem Aufruf von free(). Dadurch bleibt das Echtzeitverhalten des IOC unbeeinflusst.
